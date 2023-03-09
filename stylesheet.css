@@ -1,204 +1,266 @@
-* {
+/* Reset CSS (JANGAN DIHAPUS) */
+html, body,
+ul, ol, li,
+h1, h2, h3, h4, h5, h6, p,
+form, input, div, textarea {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: "Lucida Grande";
+  font-family: Calibri, sans-serif;
 }
 
-a {
-  text-decoration: none;
+li {
+  list-style: none;
 }
 
-.clear {
-  clear: left;
+/* Ketik code Anda di bawah */
+.container{
+  margin-top: 15px;
+  background-color: #303030;
+  height: 60px;
+  width: 100%;
 }
 
-.container {
-  max-width: 1170px;
-  padding: 0 15px;
-  margin: 0 auto;
-}
-
-.top-wrapper {
-  padding: 180px 0 100px 0;
-  background-image: url(https://prog-8.com/images/html/advanced/top_en.png);
-  background-size: cover;
+.header-left{
   color: white;
+  height: 100%;
+  float:left;
+  background-color: #eb8934;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-title{
+  font-family: Calibri, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  font-weight: 1000;
+  letter-spacing: 5px;
+  padding: 0px 20px;
+  
+}
+
+.header-right{
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.header-right li{
+  display: flex;
+  align-items: center;
+  color: white;
+  float:left;
+  height: 100%;
+  padding: 0px 20px;
+  transition: all 0.13s;
+}
+
+.header-right li:hover{
+  border-bottom: 5px solid #1c8beb;
+  background-color: #707070;
+  cursor: pointer;
+}
+
+/* 2. Bagian Atas Halaman */
+.body-content h1{
+  font-size: 140px;
+}
+
+.body-content h2{
+  font-size: 60px;
+  font-weight: 1;
+  color: #545454;
+  font-family: ;
+}
+
+.body-content span{
+  color: #eb8934;
+}
+
+.body-content{
+  padding: 100px 80px 80px 80px;
   text-align: center;
 }
 
-.top-wrapper h1 {
-  opacity: 0.7;
-  font-size: 45px;
-  letter-spacing: 5px;
+.body-content img{
+  width: 210px;
+}
+
+/* 3. Body About */
+.body-about-wrapper{
+  width: 100%;
+  background-color: #dedede;
+  text-align: center;
+}
+
+.body-about{
+  padding: 100px 80px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.body-about p{
+  margin-top: 20px;
+  color: #545454; 
+}
+
+/* 4. Bagian Konten atau Isi */
+.body-lesson{
+  padding: 140px 80px;
+  text-align: center;
+}
+
+.lesson-header{
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.lesson-card-wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 350px;
+}
+
+.lesson-card{
+  align-items: top;
+  text-align:center;
+  max-width: 350px;
+  padding: 20px;
+}
+
+.lesson-card img{
+  width: 100%;
+  margin-bottom: 30px;
+  max-height: 80%;
+}
+
+.lesson-card p{
+  font-size: 24px;
+}
+
+.link-porto{
+  text-decoration: none;
+  color: black;
+}
+
+.link-wrapper{
+  border-box: inherit;
+  transition: all 0.5s;
+  border: 1px solid grey;
+  height: 100%;
+  background: #fcf5f0; 
+  border-radius: 5px;
+}
+
+.link-wrapper:hover{
+  background:#ffd2ad;
+}
+
+/* 5. Bagian Formulir */
+.body-form{
+  padding: 80px 80px;
+  background-color: #dedede;
+  text-align: center;
+  margin: auto;
+}
+
+.form-header{
+  font-size: 28px;
+  padding-bottom: 30px;
+}
+
+.btn{
+  width: 300px;
+  font-size: 18px;
+  color: white;
+  background-color: #1c8beb;
+  padding: 20px;
+  border: 1px solid #dee7ec;
+  display: inline-block;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.form-input{
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.form-input p{
   margin-bottom: 10px;
 }
 
-.top-wrapper p {
-  opacity: 0.7;
-  margin-bottom: 3px;
+.form-input-box{
+  width: 600px;
+  padding: 20px;
+  font-size: 18px;
+  color: #889eab;
+  border: 1px solid #dee7ec;
+  border-radius: 10px;
+  font-family: Calibri, sans-serif;
+  resize: vertical;
 }
 
-.btn-wrapper {
-  text-align: center;
-  margin: 20px 0;
+/* 6. Footer */
+footer{
+  height: 120px;
+  padding: 40px;
+  color: #fff;
+  background-color: #2f5167;
 }
 
-.btn-wrapper p {
-  margin: 10px 0;
-}
-
-.signup {
-  background-color: #239b76;
-}
-
-.facebook {
-  background-color: #3b5998;
-  margin-right: 10px;
-}
-
-.twitter {
-  background-color: #55acee;
-}
-
-.btn {
-  padding: 12px 24px;
-  color: white;
-  display: inline-block;
-  opacity: 0.8;
-  border-radius: 4px;
-  text-align: center;
-}
-
-.btn:hover {
-  opacity: 1;
-}
-
-.fa {
-  margin-right: 5px;
-}
-
-header {
-  height: 65px;
-  width: 100%;
-  background-color: rgba(34, 49, 52, 0.9);
-  position :fixed;
-  top: 0;
-  z-index: 10;
-}
-
-.logo {
-  width: 124px;
-  margin-top: 20px;
-}
-
-.header-left {
-  float: left;
-}
-
-.header-right {
-  float: right;
-  margin-right: -25px;
-}
-
-.header-right a {
-  line-height: 65px;
-  padding: 0 25px;
-  color: white;
-  display: block;
-  float: left;
-  transition: all 0.5s;
-}
-
-.header-right a:hover {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-
-.menu-icon{
-  color: white;
-  float: right;
-  font-size: 25px;
-  padding: 21px 0;
-  display: none;
-}
-
-.lesson-wrapper {
-  padding-bottom: 80px;
-  padding-left: 5%;
-  padding-right: 5%;
-  background-color: #f7f7f7;
-  text-align: center;
-}
-
-.heading {
-  padding-top: 80px;
-  padding-bottom: 50px;
-  color: #5f5d60;
-}
-
-.heading h2 {
-  font-weight: normal;
-}
-
-.lesson {
-  float: left;
-  width: 25%;
-}
-
-.lesson-icon {
-  position: relative;
-}
-
-.lesson-icon p {
-  position: absolute;
-  top: 44%;
-  width: 100%;
-  color: white;
-}
-
-.text-contents {
-  width: 80%;
-  display: inline-block;
-  margin-top: 15px;
+.footer-left{
   font-size: 15px;
-  color: #b3aeb5;
+  float:left;
 }
 
-.heading h3 {
-  font-weight: normal;
+.footer-left a{
+  color: white;
+  text-decoration: none;
+  transition: all 0.1s;
+  padding: 5px;
+  border: 1px solid;
 }
 
-.message-wrapper {
-  border-bottom: 1px solid #eee;
-  padding-bottom: 80px;
-  text-align: center;
+.footer-left a:hover{
+  color: white;
+  text-decoration: none;
+  background-color: #9391ff;
+  padding:5px;
+  border: 1px solid #9391ff;
+
 }
 
-.message {
-  padding: 15px 40px;
-  background-color: #5dca88;
-  cursor: pointer;
-  box-shadow: 0 7px #1a7940;
+.footer-right{
+  height: 120px;
+  float: right;
 }
 
-.message:active {
-  position: relative;
-  top: 7px;
-  box-shadow: none;
+.footer-right li{
+  margin-bottom: 20px;
 }
 
-footer img {
-  width: 125px;
+.c31{
+  color: #ff00a2;
+  font-family: 'Ubuntu';
+  font-weight: bold;
+  font-size: 22px;
 }
 
-footer p {
-  color: #b3aeb5;
-  font-size: 12px;
+.ninja-ken{
+  /* color:#464573; */
+  color: #9391ff;
+  font-weight: bold;
+  font-size: 22px;
 }
 
-footer {
-  padding-top: 30px;
-  padding-bottom: 20px;
+.tailwindcss{
+  max-height: 20px;
 }
